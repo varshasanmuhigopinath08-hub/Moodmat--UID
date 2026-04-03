@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Mood Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="loadUser(); showHistory();">
+<div class="emoji-bg" id="emojiBg"></div>
+
+<div class="container">
+    <h1>MoodMate✨Smart Mood Tracker</h1>
+    <h2 id="welcome"></h2>
+    
+
+<h3>Select Your Mood</h3>
+
+    <div class="moods">
+        <button onclick="setMood('Happy')">😄Happy</button>
+        <button onclick="setMood('Neutral')">😐Neutral</button>
+        <button onclick="setMood('Sad')">😢Sad</button>
+        <button onclick="setMood('Angry')">😡Angry</button>
+        <button onclick="setMood('Tired')">😴Tired</button>
+        <button onclick="setMood('Stress')">😫Stress</button>
+        <button onclick="setMood('cool')">😎Cool</button>
+        <button onclick="setMood('lovely')">😍Lovely</button>
+        
+    </div>
+
+    <textarea id="note" placeholder="Write a note..."></textarea>
+    <button onclick="saveMood()">Save Mood</button>
+    <p id="quote" style="font-style:italic; margin-top:10px;"></p>
+    <h3>🔥 Mood Streak</h3>
+<p id="streakText">0 days</p>
+
+    <h3>Mood History</h3>
+    <div id="history"></div>
+    <h3>Weekly Mood Chart</h3>
+<canvas id="moodChart" height="200"></canvas>
+<h3>Your Mood Insight</h3>
+<p id="insightText">No data yet.</p>
+<h3>Mood Calendar</h3>
+<div id="calendar"></div>
+
+
+    <button onclick="toggleDark()">🌙 Toggle Dark Mode</button>
+    <h3>🎮 Mood Booster</h3>
+<div id="gameArea">
+    <p>Select a mood to see a relaxing activity.</p>
+</div>
+<button onclick="logout()">Logout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
